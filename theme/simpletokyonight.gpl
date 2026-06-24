@@ -1,0 +1,16 @@
+GIMP Palette
+Name: Simple TOKYO NIGHT
+Columns: 8
+#
+247 118 142	Accent Pink (#f7768e)
+ 26  27  38	Main BG (#1a1b26)
+ 50  52  73	Panel BG (#323449)
+233 233 237	Main Text (#e9e9ed)
+122 162 247	Tokyo Blue (#7aa2f7)
+158 206 106	Tokyo Green (#9ece6a)
+224 175 104	Tokyo Yellow (#e0af68)
+255 158 100	Tokyo Orange (#ff9e64)
+187 154 247	Tokyo Purple (#bb9af7)
+ 65  72  104	Comment Grey (#414868)
+245  42 101	Tokyo Error (#f52a65)
+ 56 112 104	Tokyo Success (#387068)
