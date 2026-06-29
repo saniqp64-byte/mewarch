@@ -1,0 +1,75 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Ubuntu Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(247, 118, 142, 0.25);
+    color: #c0caf5;
+}
+
+/* Красный значок Арча слева */
+#custom-arch {
+    color: #f7768e;
+    background-color: rgba(30, 32, 48, 0.75);
+    font-size: 16px;
+    margin: 5px 0px 5px 6px; /* Убираем правый отступ, чтобы сливался с воркспейсами */
+    padding: 0px 6px 0px 14px;
+    border-radius: 8px 0px 0px 8px; /* Округляем только левые углы */
+}
+
+/* Капсула воркспейсов */
+#workspaces {
+    background-color: rgba(30, 32, 48, 0.75);
+    margin: 5px 6px 5px 0px; /* Убираем левый отступ */
+    padding: 2px 8px 2px 0px;
+    border-radius: 0px 8px 8px 0px; /* Округляем только правые углы */
+}
+
+/* Иконки рабочих столов */
+#workspaces button {
+    padding: 0px 10px;
+    color: #565f89; /* Неактивные столы будут аккуратно приглушены */
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+/* Активный рабочий стол выделяется неоном */
+#workspaces button.active {
+    color: #f7768e;
+    font-size: 14px;
+}
+
+/* Если на рабочем столе есть открытые окна, но он не активен */
+#workspaces button.urgent {
+    color: #e0af68;
+}
+
+#workspaces button:hover {
+    color: #7aa2f7;
+}
+
+/* Все остальные модули */
+#clock, #cpu, #memory, #network, #wireplumber, #tray {
+    background-color: rgba(30, 32, 48, 0.75);
+    margin: 5px 6px;
+    padding: 0px 16px;
+    border-radius: 8px;
+}
+
+#clock { color: #b4befe; }
+#cpu { color: #73daca; }
+#memory { color: #e0af68; }
+#wireplumber { color: #7aa2f7; }
+
+#network {
+    color: #f7768e;
+    border-bottom: 2px solid #f7768e;
+}
+
+#tray { padding: 0px 12px; }

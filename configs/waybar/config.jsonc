@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 38,
+    "margin-top": 8,
+    "margin-left": 14,
+    "margin-right": 14,
+
+    // Добавляем custom/arch перед воркспейсами
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "network", "wireplumber", "tray"],
+
+    // Статичная красная иконка Арча
+    "custom/arch": {
+        "format": "  ",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "format": "{icon}",
+        // Кастомные иконки под твой геймдев/код сетап (1: Терминал, 2: Код, 3: Браузер, 4: Игры/Движки, 5: Дискорд, 6: Музыка)
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "default": "",
+            "active": ""
+        },
+        // Заставляем Waybar ВСЕГДА показывать эти 6 рабочих столов
+        "persistent-workspaces": {
+            "*": 6
+        }
+    },
+
+    "clock": {
+        "format": "  {:%H:%M  |    %a %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "  {}%",
+        "interval": 2
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-disconnected": "⚠  No Internet"
+    },
+
+    "wireplumber": {
+        "format": "{icon}  {volume}%",
+        "format-muted": " Muted",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 12
+    }
+}

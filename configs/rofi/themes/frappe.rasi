@@ -1,0 +1,106 @@
+* {
+    /* Шрифт */
+    font:   "Minecraft Rus 11";
+
+    /* Официальная палитра Catppuccin Frappé */
+    base:      #303446;
+    mantle:    #292c3c;
+    surface0:  #414559;
+    text:      #c6d0f5;
+
+    sapphire:  #85c1dc;
+    red:       #e78284;
+
+    background-color:   transparent;
+    text-color:         @text;
+    transparent:        rgba(0,0,0,0);
+}
+
+window {
+    location:        center;
+    anchor:          center;
+    transparency:    "screenshot";
+    padding:         10px;
+    border:          0px;
+    border-radius:   0px; /* КВАДРАТНЫЕ УГЛЫ */
+
+    background-color: @transparent;
+    spacing: 0;
+    children: [mainbox];
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    color: @surface0;
+    padding: 5px;
+    border-color: @surface0;
+    border: 0px 1px 1px 1px;
+    background-color: @base;
+}
+
+inputbar {
+    color: @text;
+    padding:    11px;
+    background-color:   @surface0;
+
+    border: 1px;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    border-color: @surface0;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 1em 0em 0em;
+}
+
+listview {
+    padding: 8px;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    border-color: @surface0;
+    border: 0px 1px 1px 1px;
+    background-color: @mantle;
+    dynamic: false;
+}
+
+element {
+    padding: 5px;
+    vertical-align: 0.5;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    background-color: transparent;
+    text-color: @text;
+}
+
+element selected.normal {
+    background-color: @sapphire;
+    text-color: #292c3c; /* Темный текст на светлом сапфировом фоне */
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+    size: 24px;
+}
+
+button {
+    padding: 6px;
+    color: @text;
+    horizontal-align: 0.5;
+
+    border: 1px;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    border-color: @surface0;
+}
+
+button selected normal {
+    border: 3px;
+    border-color: @text;
+    background-color: @surface0;
+}

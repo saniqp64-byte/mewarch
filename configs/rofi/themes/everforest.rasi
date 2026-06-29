@@ -1,0 +1,106 @@
+* {
+    /* Используем JetBrainsMono, раз мы его ставили */
+    font:   "Minecraft Rus 11";
+
+    bgdark:      #272E33;
+    bgalt:       #3C4841;
+    bggreen:     #56635F;
+    fg0:         #D3C6AA; /* Светлый Everforest для текста */
+
+    accent-color:     #A7C080; /* Зеленый акцент */
+    urgent-color:     #E67E80; /* Красный для важного */
+
+    background-color:   transparent;
+    text-color:         @fg0;
+    transparent:        rgba(0,0,0,0);
+}
+
+window {
+    location:       center;
+    anchor:         center;
+    transparency:   "screenshot";
+    padding:        10px;
+    border:         0px;
+    border-radius:  0px; /* КВАДРАТНЫЕ УГЛЫ */
+
+    background-color: @transparent;
+    spacing: 0;
+    children: [mainbox];
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    color: @bggreen;
+    padding: 5px;
+    border-color: @bggreen;
+    border: 0px 1px 1px 1px;
+    background-color: @bgdark;
+}
+
+inputbar {
+    color: @fg0;
+    padding:    11px;
+    background-color:   @bgalt;
+
+    border: 1px;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    border-color: @bggreen;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 1em 0em 0em;
+}
+
+listview {
+    padding: 8px;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    border-color: @bggreen;
+    border: 0px 1px 1px 1px;
+    /* Убрал синий цвет из темы Nord, поставил Everforest */
+    background-color: #2E383C; 
+    dynamic: false;
+}
+
+element {
+    padding: 5px;
+    vertical-align: 0.5;
+    border-radius: 0px; /* КВАДРАТНЫЕ УГЛЫ */
+    background-color: transparent;
+    text-color: @fg0;
+}
+
+element selected.normal {
+    background-color: @accent-color;
+    text-color: #272E33; /* Темный текст на светлом фоне */
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+    size: 24px;
+}
+
+button {
+    padding: 6px;
+    color: @fg0;
+    horizontal-align: 0.5;
+
+    border: 1px;
+    border-radius: 100px; /* КВАДРАТНЫЕ УГЛЫ */
+    border-color: @bggreen;
+}
+
+button selected normal {
+    border: 3px;
+    border-color: @fg0;
+    background-color: @bgalt;
+}
